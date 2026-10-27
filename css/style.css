@@ -1,0 +1,267 @@
+/* Shared styles for every page. Navy on white, system sans-serif. */
+
+:root {
+  --navy: #003087;
+  --navy-dark: #00205c;
+  --text: #1a202c;
+  --muted: #5a6577;
+  --line: #e3e7ee;
+  --tint: #f7f9fc;
+  --bg: #ffffff;
+  --radius: 10px;
+  --max: 960px;
+  --gutter: 24px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--navy); text-underline-offset: 3px; }
+a:hover { color: var(--navy-dark); }
+
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---------- Header / footer ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+
+.site-header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.site-name {
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.site-nav { display: flex; gap: 20px; font-size: 0.95rem; }
+.site-nav a { text-decoration: none; color: var(--muted); }
+.site-nav a:hover { color: var(--navy); }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 96px;
+  padding: 32px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Headings ---------- */
+
+h1, h2, h3 { color: var(--navy); line-height: 1.25; margin: 0; }
+
+h1 { font-size: clamp(2rem, 5vw, 2.75rem); letter-spacing: -0.01em; }
+h2 { font-size: 1.5rem; margin-bottom: 20px; }
+h3 { font-size: 1.1rem; margin-bottom: 8px; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+/* ---------- Landing: intro ---------- */
+
+.intro { padding: 88px 0 72px; }
+.intro p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 40em;
+  margin: 20px 0 0;
+}
+
+/* ---------- Landing: project cards ---------- */
+
+.section { padding: 48px 0; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background: var(--bg);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  border-color: var(--navy);
+  box-shadow: 0 6px 20px rgba(0, 48, 135, 0.08);
+}
+
+.card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+  width: 100%;
+  border-bottom: 1px solid var(--line);
+  background: var(--tint);
+}
+
+.card-body { padding: 22px 22px 26px; }
+.card-body p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+/* ---------- Contact ---------- */
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-list span {
+  display: inline-block;
+  min-width: 6.5em;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 12px 22px;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.button:hover { background: var(--navy-dark); color: #fff; }
+
+.button-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+}
+.button-outline:hover { background: var(--tint); color: var(--navy-dark); }
+
+/* ---------- Project detail pages ---------- */
+
+.back { display: inline-block; margin-top: 40px; font-size: 0.95rem; text-decoration: none; }
+
+.project-head { padding: 32px 0 40px; }
+.project-head .lede {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 38em;
+  margin: 18px 0 0;
+}
+
+.hero {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.figure-caption { color: var(--muted); font-size: 0.9rem; margin: 12px 0 0; }
+
+.block { padding: 56px 0 0; }
+.block p, .block li { max-width: 40em; }
+.block ul { padding-left: 1.2em; }
+.block li { margin-bottom: 10px; }
+
+.finding { margin-top: 36px; }
+.finding:first-of-type { margin-top: 0; }
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 8px 0 12px;
+}
+
+.metric {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.metric-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.metric-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-top: 6px;
+}
+
+.metric-note { font-size: 0.85rem; color: var(--muted); }
+
+/* Horizontal bars for share-of-signal style breakdowns */
+.bars { list-style: none; padding: 0; margin: 20px 0; max-width: 40em; }
+.bars li { margin-bottom: 14px; max-width: none; }
+.bar-label { display: flex; justify-content: space-between; font-size: 0.95rem; }
+.bar-track { height: 10px; background: var(--line); border-radius: 5px; margin-top: 6px; }
+.bar-fill { height: 100%; background: var(--navy); border-radius: 5px; }
+.bar-fill.muted { background: #9aa5b1; }
+
+.table-scroll { overflow-x: auto; }
+
+table { border-collapse: collapse; width: 100%; max-width: 40em; font-size: 0.95rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.links { display: flex; flex-wrap: wrap; gap: 14px; }
+.links .button { margin-top: 0; }
+
+/* ---------- Phone ---------- */
+
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+  body { font-size: 16px; }
+  .intro { padding: 56px 0 40px; }
+  .intro p, .project-head .lede { font-size: 1.08rem; }
+  .section { padding: 36px 0; }
+  .block { padding-top: 44px; }
+  .site-footer { margin-top: 64px; }
+  .metric-value { font-size: 1.7rem; }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sheffield Shield Season Analysis 2025/26 — Kush Girap</title>
+  <meta name="description" content="An end-to-end pipeline and three Tableau dashboards covering South Australia's 2025/26 Sheffield Shield season, built as a pre-final briefing.">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="../../">Kush Girap</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../../#projects">Projects</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <a class="back" href="../../#projects">← All projects</a>
+
+  <section class="project-head">
+    <p class="eyebrow">Data pipeline · Tableau dashboards</p>
+    <h1>Sheffield Shield Season Analysis 2025/26</h1>
+    <p class="lede">
+      An end-to-end pipeline and three dashboards covering South Australia's season,
+      built as a pre-final briefing.
+    </p>
+  </section>
+
+  <figure class="hero" style="margin:0">
+    <img src="../../images/sheffield-shield-dashboard.png" width="2940" height="1766"
+         alt="Tableau dashboard of South Australia batting performance: batting average, strike rate, partnerships, innings scores, dismissal types and run progression">
+  </figure>
+  <p class="figure-caption">The batting insights dashboard, one of three in the briefing.</p>
+
+  <section class="block">
+    <h2>The question</h2>
+    <p>
+      South Australia had ten group-stage matches behind them going into the Sheffield
+      Shield final. What did that season actually say about how they bat and bowl?
+    </p>
+  </section>
+
+  <section class="block">
+    <h2>What it covers</h2>
+    <p>
+      Three Tableau dashboards built as a pre-final briefing: a season overview, batting
+      insights, and bowling insights.
+    </p>
+    <ul>
+      <li>
+        <strong>Batting.</strong> Partnership quality and dismissal patterns, shown
+        alongside the headline averages.
+      </li>
+      <li>
+        <strong>Bowling.</strong> Phase-level bowling analysis, not just economy and wickets.
+      </li>
+    </ul>
+    <p>Shared with a performance analyst at SACA ahead of the final.</p>
+  </section>
+
+  <section class="block">
+    <h2>How it was built</h2>
+    <ul>
+      <li>
+        <strong>Pipeline.</strong> An end-to-end Python pipeline parses Cricsheet
+        ball-by-ball JSON into structured delivery-level records.
+      </li>
+      <li>
+        <strong>Features.</strong> Engineered fields for phase of innings, partnership
+        identifiers, and collapse detection.
+      </li>
+      <li>
+        <strong>Dashboards.</strong> The processed data feeds the three Tableau dashboards.
+      </li>
+    </ul>
+    <p class="eyebrow" style="margin-top:24px">Python · Cricsheet · Tableau</p>
+  </section>
+
+  <section class="block">
+    <h2>Links</h2>
+    <p>The three dashboards on Tableau Public:</p>
+    <div class="links">
+      <a class="button" href="https://public.tableau.com/app/profile/kush.girap/viz/SASheffieldShield202526-SeasonOverview/Matchresultsoverview">Season overview</a>
+      <a class="button" href="https://public.tableau.com/app/profile/kush.girap/viz/SASheffieldShield202526-BattingPerformance/SABattingperformance">Batting performance</a>
+      <a class="button" href="https://public.tableau.com/app/profile/kush.girap/viz/SASheffieldShield202526-BowlingPerformance/SABowlingperformance">Bowling performance</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Kush Girap · <a href="mailto:kushgirap7@gmail.com">kushgirap7@gmail.com</a></div>
+</footer>
+
+</body>
+</html>

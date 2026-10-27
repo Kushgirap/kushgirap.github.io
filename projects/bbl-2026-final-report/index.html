@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BBL 2026 Final — Post-Match Coaching Report — Kush Girap</title>
+  <meta name="description" content="Three tactical findings from a hand-coded BBL 2026 Final, written for a coach rather than an analyst.">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="../../">Kush Girap</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../../#projects">Projects</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <a class="back" href="../../#projects">← All projects</a>
+
+  <section class="project-head">
+    <p class="eyebrow">Match analysis · Hand-coded data</p>
+    <h1>BBL 2026 Final — Post-Match Coaching Report</h1>
+    <p class="lede">
+      Three tactical findings from a hand-coded final, written for a coach rather than
+      an analyst.
+    </p>
+  </section>
+
+  <figure class="hero" style="margin:0 auto; max-width:640px">
+    <img src="../../images/bbl-final-wagon-wheel.png" width="1392" height="1392"
+         alt="Wagon wheel titled Smith vs Pace: 23 shots drawn from the crease, coloured by runs scored, with most sixes on one side of the ground">
+  </figure>
+  <p class="figure-caption" style="text-align:center">Smith against pace in the final. Each line is one shot, coloured by runs scored.</p>
+
+  <section class="block">
+    <h2>The question</h2>
+    <p>
+      Sydney Thunder made 189 batting first in the BBL 2026 Final and lost. Where did
+      the match actually turn?
+    </p>
+  </section>
+
+  <section class="block">
+    <h2>What I found</h2>
+
+    <div class="finding">
+      <h3>1. Thunder found the way to contain Smith, and used it too late.</h3>
+      <p>
+        Steve Smith scored at a strike rate of 341 against right-arm pace, with seven
+        sixes. Tanveer Sangha's leg spin held him to a strike rate of 100, with five dots
+        in twelve balls.
+      </p>
+      <div class="metrics">
+        <div class="metric">
+          <span class="metric-label">Smith vs right-arm pace</span>
+          <span class="metric-value">341</span>
+          <span class="metric-note">strike rate, 7 sixes</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Smith vs Sangha</span>
+          <span class="metric-value">100</span>
+          <span class="metric-note">strike rate, 5 dots in 12 balls</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <h3>2. Hadley kept bowling to Smith's strength without adjusting.</h3>
+      <p>
+        Ryan Hadley bowled good length outside off to Smith eight times and conceded 26
+        runs from that one zone. Four of those eight balls went for six.
+      </p>
+    </div>
+
+    <div class="finding">
+      <h3>3. Green showed how to stop Babar. Nobody else followed.</h3>
+      <p>
+        Babar Azam scored 47 off 39, largely because Thunder kept offering width outside
+        off stump, his main scoring zone. Chris Green held him to a strike rate of 80,
+        with nine dots in fifteen balls, by bowling a tight middle-stump line. No other
+        bowler did the same.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>How it was built</h2>
+    <ul>
+      <li>
+        <strong>Hand-coded data.</strong> All 239 deliveries of the final, with 28
+        variables per ball: line, length, shot played, intended and actual direction,
+        ball speed, batter handedness, and dismissal detail.
+      </li>
+      <li>
+        <strong>Charts built from scratch.</strong> Beehive and wagon wheel charts in
+        Python, including mirroring for left-handers and the boundary geometry.
+      </li>
+      <li>
+        <strong>Written for coaching staff.</strong> Each finding leads with the insight,
+        uses a visual as proof, and ends with a recommended action.
+      </li>
+    </ul>
+    <p class="eyebrow" style="margin-top:24px">Hand-coded data · Python</p>
+  </section>
+
+  <section class="block">
+    <h2>Links</h2>
+    <div class="links">
+      <a class="button" href="../../bbl-2026-final-report.pdf">Read the full report (PDF, 6 pages)</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Kush Girap · <a href="mailto:kushgirap7@gmail.com">kushgirap7@gmail.com</a></div>
+</footer>
+
+</body>
+</html>
