@@ -15,8 +15,7 @@
   --c-link: #003087;
 
   --pad-y: 64px;
-  --pad-x: 48px;
-  --image-h: 380px;
+  --pad-x: 32px;
 }
 
 * { box-sizing: border-box; }
@@ -43,8 +42,15 @@ h1, h2, h3 { margin: 0; color: var(--c-head); }
 
 /* ---------- Bands ---------- */
 
+/* Shared content column: every band and every detail page lines up on it */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
 .band {
-  padding: var(--pad-y) var(--pad-x);
+  padding: var(--pad-y) 0;
   color: var(--b-support);
 }
 
@@ -55,6 +61,7 @@ h1, h2, h3 { margin: 0; color: var(--c-head); }
   --b-support: #555555;
   --b-label: #73726C;
   --b-link: #003087;
+  --b-frame: #E4E1D9;
 }
 
 .band-dark {
@@ -64,6 +71,7 @@ h1, h2, h3 { margin: 0; color: var(--c-head); }
   --b-support: #9CA3AF;
   --b-label: #777F8D;
   --b-link: #5DCAA5;
+  --b-frame: rgba(255, 255, 255, 0.14);
 }
 
 .band-navy {
@@ -72,6 +80,7 @@ h1, h2, h3 { margin: 0; color: var(--c-head); }
   --b-support: #B5D4F4;
   --b-label: #85B7EB;
   --b-link: #FFFFFF;
+  --b-frame: rgba(255, 255, 255, 0.22);
 }
 
 .label {
@@ -123,13 +132,21 @@ h1, h2, h3 { margin: 0; color: var(--c-head); }
 
 .band-navy .text-link { text-decoration: underline; }
 
-/* Images sit flush between bands */
-.band-image {
-  width: 100%;
-  height: var(--image-h);
-  max-width: none;
-  object-fit: cover;
+/* Screenshots: whole image at its natural aspect ratio, framed, on the content edge */
+.shot {
+  margin: 40px 0 0;
+  max-width: 1100px;
+  padding: 6px;
+  border: 1px solid var(--b-frame, var(--line));
 }
+
+.shot img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.shot-narrow { max-width: 600px; }
 
 /* ---------- Landing: intro ---------- */
 
@@ -201,17 +218,6 @@ h1, h2, h3 { margin: 0; color: var(--c-head); }
   color: var(--b-support);
 }
 
-.wrap { padding: 0 var(--pad-x); }
-
-.hero {
-  margin: 48px 0 0;
-  max-width: 960px;
-  border: 1px solid var(--line);
-  overflow: hidden;
-  background: #fff;
-}
-
-.hero-narrow { max-width: 640px; }
 
 .figure-caption {
   margin: 12px 0 0;
@@ -288,12 +294,11 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .site-footer {
   margin-top: 96px;
-  padding: 32px var(--pad-x);
+  padding: 32px 0;
   border-top: 1px solid var(--line);
   font-size: 14px;
   color: var(--c-label);
 }
-.site-footer .wrap { padding: 0; }
 
 /* ---------- Phone ---------- */
 
@@ -301,8 +306,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   :root {
     --pad-y: 40px;
     --pad-x: 24px;
-    --image-h: 220px;
   }
+  .shot { margin-top: 32px; padding: 4px; }
   .headline { font-size: 22px; }
   .intro .position { font-size: 28px; }
   .block { padding-top: 44px; }
