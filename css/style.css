@@ -193,6 +193,23 @@ h1, h2, h3 { margin: 0; color: var(--c-head); }
 
 .contact .text-links { margin-top: 32px; }
 
+/* ---------- Landing: two-column project bands ---------- */
+
+/* Text and image side by side on wide screens; project 2 swaps sides.
+   The markup keeps text first, so the single-column fallback reads text then image. */
+@media (min-width: 900px) {
+  .project {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .project-reverse { grid-template-columns: 55fr 45fr; }
+  .project-reverse .project-text { order: 2; }
+  .project .headline { max-width: 100%; }
+  .project .shot { margin-top: 0; }
+}
+
 /* ---------- Detail pages ---------- */
 
 .back {
